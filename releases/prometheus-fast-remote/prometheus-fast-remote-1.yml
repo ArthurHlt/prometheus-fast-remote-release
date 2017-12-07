@@ -1,0 +1,21 @@
+name: prometheus-fast-remote
+version: "1"
+commit_hash: 56910dd
+uncommitted_changes: false
+jobs:
+- name: prometheus-fast-remote
+  version: 5fc9f9b5bf41c330798007cee0bb3b3ce67e276f
+  fingerprint: 5fc9f9b5bf41c330798007cee0bb3b3ce67e276f
+  sha1: b57481ae12725784ff9d3952fd608e440c7918d4
+packages:
+- name: go
+  version: f0f9bc219324757a7b28522f3d44bd90f0d6261f
+  fingerprint: f0f9bc219324757a7b28522f3d44bd90f0d6261f
+  sha1: c298d10462d4103fa158d0a31f360f3bae8f663f
+  dependencies: []
+- name: prometheus-fast-remote
+  version: 0eb727afe6423e48c99f24b240cd4889aaec808c
+  fingerprint: 0eb727afe6423e48c99f24b240cd4889aaec808c
+  sha1: 96af784d65b0973e42b5918a1ca414ebdcb27fca
+  dependencies:
+  - go
