@@ -1,0 +1,8 @@
+---
+name: prometheus-fast-remote
+
+dependencies:
+- go
+
+files:
+- prometheus-fast-remote/**/*

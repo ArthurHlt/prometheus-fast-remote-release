@@ -1,0 +1,34 @@
+---
+name: prometheus-fast-remote
+
+templates:
+  bin/ctl: bin/ctl
+  bin/monit_debugger: bin/monit_debugger
+  data/config.yml.erb: data/config.yml
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+
+
+packages:
+- go
+- prometheus-fast-remote
+
+properties:
+  fast_remote.kairos_url:
+    description: Url to target your kairosdb
+    example: https://my.kairosdb.com
+  fast_remote.skip_insecure:
+    description: Set to true if you don't want to check certificates (not recommended)
+    default: false
+  fast_remote.listen_addr:
+    description: Set the interface and port to listen for the remote server
+    default: "0.0.0.0:9119"
+  fast_remote.log_level:
+    description: "Set log level (Values are: DEBUG, INFO, WARNING, ERROR and PANIC)"
+    default: INFO
+  fast_remote.log_json:
+    description: Set to true to save logs in json format
+    default: true
+  fast_remote.workers:
+    description: Set number of workers in the pool to write samples into the time serie database. 
+    default: 10

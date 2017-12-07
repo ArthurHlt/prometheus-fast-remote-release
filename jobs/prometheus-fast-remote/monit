@@ -1,0 +1,5 @@
+check process prometheus-fast-remote
+  with pidfile /var/vcap/sys/run/prometheus-fast-remote/prometheus-fast-remote.pid
+  start program "/var/vcap/jobs/prometheus-fast-remote/bin/monit_debugger prometheus-fast-remote_ctl '/var/vcap/jobs/prometheus-fast-remote/bin/ctl start'"
+  stop program "/var/vcap/jobs/prometheus-fast-remote/bin/monit_debugger prometheus-fast-remote_ctl '/var/vcap/jobs/prometheus-fast-remote/bin/ctl stop'"
+  group vcap

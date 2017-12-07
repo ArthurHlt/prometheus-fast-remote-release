@@ -1,0 +1,3 @@
+[submodule "src/prometheus-fast-remote"]
+	path = src/prometheus-fast-remote
+	url = https://github.com/orange-cloudfoundry/prometheus-fast-remote.git

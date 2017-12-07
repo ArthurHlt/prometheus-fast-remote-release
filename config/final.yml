@@ -1,0 +1,5 @@
+name: prometheus-fast-remote
+blobstore:
+  provider: s3
+  options:
+    bucket_name: orange-dfy-pfr-release
